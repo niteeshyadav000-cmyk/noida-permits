@@ -1,0 +1,22 @@
+{
+  "name": "playwright-project",
+  "version": "1.0.0",
+  "description": "Playwright project with local AI testing agent",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "agent": "node ai-agent.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "ollama": "^0.6.4"
+  }
+}
