@@ -1,3 +1,4 @@
+
 {
   "name": "playwright-project",
   "version": "1.0.0",
@@ -5,7 +6,10 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
-    "agent": "node ai-agent.js"
+    "agent": "node ai-agent.js",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
   },
   "keywords": [],
   "author": "",
