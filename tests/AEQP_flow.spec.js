@@ -9,11 +9,11 @@ const password = 'welcome';
     /**
  * @param {import('@playwright/test').Page} page
  */
-async function setZoom75(page) {
-    await page.evaluate(() => {
-        document.documentElement.style.zoom = '75%';
-    });
-}
+// async function setZoom75(page) {
+//     await page.evaluate(() => {
+//         document.documentElement.style.zoom = '75%';
+//     });
+// }
 // Equipment Management navigation
 /**
  * @param {import('@playwright/test').Page} page
@@ -26,7 +26,7 @@ async function openEquipmentManagement(page) {
 
     await page.locator('xpath=//*[@id="div5_ul1"]/li[1]/a/span').click();
 
-    await setZoom75(page);
+    // await setZoom75(page);
     
 }
  function generateVehicleNumber(){
@@ -36,6 +36,7 @@ const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const letter1 = letters[Math.floor(Math.random()*26)];
 const letter2 = letters[Math.floor(Math.random()*26)];
 const number = Math.floor(Math.random()*1000).toString().padStart(4,'0');
+return`${state} ${distrit} ${letter1}${letter2} ${number}`;
  }
     //login 
     /**
@@ -43,12 +44,12 @@ const number = Math.floor(Math.random()*1000).toString().padStart(4,'0');
  */
     async function login(page) {
       await page.goto(loginURL);
-      await  setZoom75(page);
+    //   await  setZoom75(page);
       await page.locator("//*[@id='txt_Username']").fill(username);
        await page.locator("//*[@id='txt_Password']").fill(password);
   await page.locator("//*[@id='btn_Login']").click();
   await expect(page).toHaveURL(dashboardURL);
-  await setZoom75(page);
+//   await setZoom75(page);
   await  openEquipmentManagement(page);
     }
     test('login function', async ({ page }) => {
@@ -62,20 +63,27 @@ await login(page);
  test('Request Application', async ({ page }) => {
 
     const vehicleNumber = generateVehicleNumber();
-
-    // console.log('Vehicle Number:', vehicleNumber);
-
-    await page.locator("//*[@id='ctl00_ContentPlaceHolder1_Pane_1_content_txt_3988_OF']").fill('vehicleNumber');
+    await page.locator("//*[@id='ctl00_ContentPlaceHolder1_Pane_1_content_txt_3988_OF']").fill(vehicleNumber);
      await page.waitForTimeout(3000);
     await page.locator("//*[@id='ctl00_ContentPlaceHolder1_Pane_1_content_ddl_5747_ME_842']").selectOption({index:2});
     await page.waitForTimeout(3000);
+    await page.locator("//*[@id='ctl00_ContentPlaceHolder1_Pane_1_content_ddl_5749_ME_844']").selectOption({index:2});
+    await page.waitForTimeout(3000);
     await page.locator("//*[@id='ctl00_ContentPlaceHolder1_Pane_1_content_txt_2157_OF']").pressSequentially('CRANE');
-   
+   await page.waitForTimeout(3000);
+   console.log(await page.locator("//*[@id='ctl00_ContentPlaceHolder1_Pane_1_content_ddl_5750_ME_845']").allTextContents());
+     await page.locator("//*[@id='ctl00_ContentPlaceHolder1_Pane_1_content_ddl_5750_ME_845']").selectOption({label: 'Rotary Slasher'});
+    await page.waitForTimeout(3000);
+    await page.evaluate(() => {
+    window.scrollBy(0,1000);
+});
+ await page.waitForTimeout(3000);
+const ctl00ContentPlaceHolder1Pane1ContentBtn2244Of =
+    page.getByRole('button', {
+        name: 'Attachments',
+        exact: true
+    });
+    
+
     })
 })
-
-
-  
-
-
-
