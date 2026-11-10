@@ -1,0 +1,44 @@
+[
+  '\n' +
+    '\t\t\t\n' +
+    '\t\t\tAir Compressor\n' +
+    '\t\t\tARC Welding Machine\n' +
+    '\t\t\tBitumen Browser\n' +
+    '\t\t\tBoom Sprayer\n' +
+    '\t\t\tCanopy Stand\n' +
+    '\t\t\tConcrete Cutter\n' +
+    '\t\t\tDiesel Generator Without Trolley\n' +
+    '\t\t\tElectric Cutting Machine\n' +
+    '\t\t\tFalcon Lift\n' +
+    '\t\t\tFast Charger\n' +
+    '\t\t\tFixed Electric Ground Power\n' +
+    '\t\t\tGas Re-filler\n' +
+    '\t\t\tHand held Communication Set\n' +
+    '\t\t\tHand held Metal Detector\n' +
+    '\t\t\tHydra Floor Crane\n' +
+    '\t\t\tHydraulic Press\n' +
+    '\t\t\tLine Laxer\n' +
+    '\t\t\tMig Welder\n' +
+    '\t\t\tMini Manual Roller\n' +
+    '\t\t\tMini Roller-IR\n' +
+    '\t\t\tOthers (Text box Required)\n' +
+    '\t\t\tPassenger Board Bridge\n' +
+    '\t\t\tPBB Maintenance Scaffold\n' +
+    '\t\t\tPBB tow Bar\n' +
+    '\t\t\tPlasma Cutter\n' +
+    '\t\t\tPlate Compactor-IR\n' +
+    '\t\t\tRotary Slasher\n' +
+    '\t\t\tRotavator\n' +
+    '\t\t\tScissor Lift(4M, 12M & 14M)\n' +
+    '\t\t\tSlow Charge\n' +
+    '\t\t\tSOD Cutter\n' +
+    '\t\t\tSrvice ladders\n' +
+    '\t\t\tTech Mach Up Lift\n' +
+    '\t\t\tTrolley Mounted  Gen set\n' +
+    '\t\t\tVacuum Cleaner\n' +
+    '\t\t\tWeight Cart\n' +
+    '\n' +
+    '\t\t'
+]
+Attachments visible: true
+Total pages: 1

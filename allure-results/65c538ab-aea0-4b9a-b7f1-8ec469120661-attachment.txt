@@ -1,0 +1,490 @@
+[
+  '\n' +
+    '\t\t\t\n' +
+    '\t\t\tAir Compressor\n' +
+    '\t\t\tARC Welding Machine\n' +
+    '\t\t\tBitumen Browser\n' +
+    '\t\t\tBoom Sprayer\n' +
+    '\t\t\tCanopy Stand\n' +
+    '\t\t\tConcrete Cutter\n' +
+    '\t\t\tDiesel Generator Without Trolley\n' +
+    '\t\t\tElectric Cutting Machine\n' +
+    '\t\t\tFalcon Lift\n' +
+    '\t\t\tFast Charger\n' +
+    '\t\t\tFixed Electric Ground Power\n' +
+    '\t\t\tGas Re-filler\n' +
+    '\t\t\tHand held Communication Set\n' +
+    '\t\t\tHand held Metal Detector\n' +
+    '\t\t\tHydra Floor Crane\n' +
+    '\t\t\tHydraulic Press\n' +
+    '\t\t\tLine Laxer\n' +
+    '\t\t\tMig Welder\n' +
+    '\t\t\tMini Manual Roller\n' +
+    '\t\t\tMini Roller-IR\n' +
+    '\t\t\tOthers (Text box Required)\n' +
+    '\t\t\tPassenger Board Bridge\n' +
+    '\t\t\tPBB Maintenance Scaffold\n' +
+    '\t\t\tPBB tow Bar\n' +
+    '\t\t\tPlasma Cutter\n' +
+    '\t\t\tPlate Compactor-IR\n' +
+    '\t\t\tRotary Slasher\n' +
+    '\t\t\tRotavator\n' +
+    '\t\t\tScissor Lift(4M, 12M & 14M)\n' +
+    '\t\t\tSlow Charge\n' +
+    '\t\t\tSOD Cutter\n' +
+    '\t\t\tSrvice ladders\n' +
+    '\t\t\tTech Mach Up Lift\n' +
+    '\t\t\tTrolley Mounted  Gen set\n' +
+    '\t\t\tVacuum Cleaner\n' +
+    '\t\t\tWeight Cart\n' +
+    '\n' +
+    '\t\t'
+]
+Number of frames: 1
+Frame URL: https://uat-dxn.aviatorsms.com/MainForm.aspx?hId=Td2JymWwcgX/7+3o/YKJmA==&cId=T6Ia2UTKDsOMFLuHtWS53A==&catID=QStsOI/ExXVAhFe3B9H2Zg==&pid=Td2JymWwcgX/7+3o/YKJmA==&fid=3q1NX9aF9UV5LJyv+4yCbQ==&RecordID=QStsOI/ExXVAhFe3B9H2Zg==&Module=aUao64M1406FsLsG4U77iQ==&Mode=C9JBk/bs/vrFlXdmvmTEmQ==&startup=QxBOUNf0JJJ/148VsXLtRg==&strtfid=3q1NX9aF9UV5LJyv+4yCbQ==&pName=oTuStdZzDdMbd2HKFqgP8A==
+Attachments count: 0
+[
+  {
+    tag: 'INPUT',
+    id: 'ctl00_ContentPlaceHolder1_TabStrip1_ClientState',
+    name: 'ctl00_ContentPlaceHolder1_TabStrip1_ClientState',
+    value: '',
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_hf_ColExp',
+    name: 'ctl00$MasterHeader$hf_ColExp',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_hf_ReminderID',
+    name: 'ctl00$MasterHeader$hf_ReminderID',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_hdf_UserID',
+    name: 'ctl00$MasterHeader$hdf_UserID',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_hd_reminder',
+    name: 'ctl00$MasterHeader$hd_reminder',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_HiddenField1',
+    name: 'ctl00$MasterHeader$HiddenField1',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_hf_SnoozeStatus',
+    name: 'ctl00$MasterHeader$hf_SnoozeStatus',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_btn_logout',
+    name: 'ctl00$MasterHeader$btn_logout',
+    value: 'Button',
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_btn_searchcode',
+    name: 'ctl00$MasterHeader$btn_searchcode',
+    value: 'Button',
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_txt_hidden_selectedPath',
+    name: 'ctl00$MasterHeader$txt_hidden_selectedPath',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_txt_hidden_PluginId',
+    name: 'ctl00$MasterHeader$txt_hidden_PluginId',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_txt_hidden_selectedLocation',
+    name: 'ctl00$MasterHeader$txt_hidden_selectedLocation',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_btnTrigger',
+    name: 'ctl00$MasterHeader$btnTrigger',
+    value: 'Button',
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_btn_unlockrow',
+    name: 'ctl00$MasterHeader$btn_unlockrow',
+    value: 'ABCD',
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_img10',
+    name: 'ctl00$MasterHeader$img10',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'A',
+    id: 'ctl00_MasterHeader_ImgFrameMenu',
+    name: null,
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'A',
+    id: 'ctl00_MasterHeader_btn_Dash',
+    name: null,
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'A',
+    id: 'ctl00_MasterHeader_btn_Fav',
+    name: null,
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'A',
+    id: 'ctl00_MasterHeader_a_refresh',
+    name: null,
+    value: null,
+    text: undefined
+  },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_img1',
+    name: 'ctl00$MasterHeader$img1',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'A',
+    id: 'ctl00_MasterHeader_lnk_changepwd',
+    name: null,
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'A',
+    id: 'ctl00_MasterHeader_lnkabout',
+    name: null,
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'A',
+    id: 'ctl00_MasterHeader_lnk_Default',
+    name: null,
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterHeader_img11',
+    name: 'ctl00$MasterHeader$img11',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_hfLOGName',
+    name: 'ctl00$MasterNavMenu$hfLOGName',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_HFDept',
+    name: 'ctl00$MasterNavMenu$HFDept',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_HFDesignation',
+    name: 'ctl00$MasterNavMenu$HFDesignation',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_hfPagename',
+    name: 'ctl00$MasterNavMenu$hfPagename',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_HFFrom',
+    name: 'ctl00$MasterNavMenu$HFFrom',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_hfLOGTime',
+    name: 'ctl00$MasterNavMenu$hfLOGTime',
+    value: 'Login Time 01:11 PM',
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_HfLogInEmpImg',
+    name: 'ctl00$MasterNavMenu$HfLogInEmpImg',
+    value: 'Images/no-profile-img.gif',
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_HiddenField2',
+    name: 'ctl00$MasterNavMenu$HiddenField2',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_Button1',
+    name: 'ctl00$MasterNavMenu$Button1',
+    value: 'Button',
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_Button2',
+    name: 'ctl00$MasterNavMenu$Button2',
+    value: 'ABCD',
+    text: undefined
+  },
+  {
+    tag: 'A',
+    id: 'ctl00_MasterNavMenu_Label3',
+    name: null,
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'A',
+    id: 'ctl00_MasterNavMenu_a_config',
+    name: null,
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'A',
+    id: 'ctl00_MasterNavMenu_a_admin',
+    name: null,
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'A',
+    id: 'ctl00_MasterNavMenu_lnkchangepwd',
+    name: null,
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'A',
+    id: 'ctl00_MasterNavMenu_lnklogout',
+    name: null,
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_btnMenuLoadClick',
+    name: 'ctl00$MasterNavMenu$btnMenuLoadClick',
+    value: '',
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_btn_safetyClick',
+    name: 'ctl00$MasterNavMenu$btn_safetyClick',
+    value: '',
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_btn_Next',
+    name: 'ctl00$MasterNavMenu$btn_Next',
+    value: 'Next',
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_btn_child',
+    name: 'ctl00$MasterNavMenu$btn_child',
+    value: '',
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_txtHidden',
+    name: 'ctl00$MasterNavMenu$txtHidden',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_txtHeadId',
+    name: 'ctl00$MasterNavMenu$txtHeadId',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_txtIndex',
+    name: 'ctl00$MasterNavMenu$txtIndex',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_HiddenModCount',
+    name: 'ctl00$MasterNavMenu$HiddenModCount',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_txtModuleIndex',
+    name: 'ctl00$MasterNavMenu$txtModuleIndex',
+    value: null,
+    text: undefined
+  },
+  {
+    tag: 'INPUT',
+    id: 'ctl00_MasterNavMenu_btn_hide',
+    name: 'ctl00$MasterNavMenu$btn_hide',
+    value: '<<',
+    text: undefined
+  },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '1', name: null, value: null, text: undefined },
+  {
+    tag: 'INPUT',
+    id: 'div1_hidden1',
+    name: 'div1_hidden1',
+    value: '0',
+    text: undefined
+  },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '2', name: null, value: null, text: undefined },
+  {
+    tag: 'INPUT',
+    id: 'div2_hidden1',
+    name: 'div2_hidden1',
+    value: '0',
+    text: undefined
+  },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  {
+    tag: 'INPUT',
+    id: 'div2_hidden2',
+    name: 'div2_hidden2',
+    value: '0',
+    text: undefined
+  },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  {
+    tag: 'INPUT',
+    id: 'div2_hidden3',
+    name: 'div2_hidden3',
+    value: '0',
+    text: undefined
+  },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  {
+    tag: 'INPUT',
+    id: 'div2_hidden4',
+    name: 'div2_hidden4',
+    value: '0',
+    text: undefined
+  },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  {
+    tag: 'INPUT',
+    id: 'div2_hidden5',
+    name: 'div2_hidden5',
+    value: '0',
+    text: undefined
+  },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '3', name: null, value: null, text: undefined },
+  {
+    tag: 'INPUT',
+    id: 'div3_hidden1',
+    name: 'div3_hidden1',
+    value: '0',
+    text: undefined
+  },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  {
+    tag: 'INPUT',
+    id: 'div3_hidden2',
+    name: 'div3_hidden2',
+    value: '0',
+    text: undefined
+  },
+  { tag: 'A', id: '', name: null, value: null, text: undefined },
+  ... 198 more items
+]

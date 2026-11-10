@@ -1,0 +1,134 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: AEQP_flow.spec.js >> login function
+- Location: tests\AEQP_flow.spec.js:55:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+  - navigating to "https://uat-dxn.aviatorsms.com/", waiting until "load"
+
+```
+
+# Test source
+
+```ts
+  1   | const{test,expect} = require ('@playwright/test')
+  2   | 
+  3   | const loginURL = 'https://uat-dxn.aviatorsms.com/';
+  4   | const dashboardURL = 'https://uat-dxn.aviatorsms.com/Menus.aspx';
+  5   | 
+  6   | const username = 'lsg_222';
+  7   | const password = 'welcome';
+  8   | //zoom size
+  9   |     /**
+  10  |  * @param {import('@playwright/test').Page} page
+  11  |  */
+  12  | // async function setZoom75(page) {
+  13  | //     await page.evaluate(() => {
+  14  | //         document.documentElement.style.zoom = '75%';
+  15  | //     });
+  16  | // }
+  17  | // Equipment Management navigation
+  18  | /**
+  19  |  * @param {import('@playwright/test').Page} page
+  20  |  */
+  21  | async function openEquipmentManagement(page) {
+  22  | 
+  23  |     await page.locator('xpath=//*[@id="form1"]/div[4]/div[4]').click();
+  24  | 
+  25  |     await page.locator('xpath=//*[@id="div5_Liparent1"]/a').click();
+  26  | 
+  27  |     await page.locator('xpath=//*[@id="div5_ul1"]/li[1]/a/span').click();
+  28  | 
+  29  |     // await setZoom75(page);
+  30  |     
+  31  | }
+  32  |  function generateVehicleNumber(){
+  33  | const state='AP';
+  34  | const distrit='31';
+  35  | const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  36  | const letter1 = letters[Math.floor(Math.random()*26)];
+  37  | const letter2 = letters[Math.floor(Math.random()*26)];
+  38  | const number = Math.floor(Math.random()*1000).toString().padStart(4,'0');
+  39  | return`${state} ${distrit} ${letter1}${letter2} ${number}`;
+  40  |  }
+  41  |     //login 
+  42  |     /**
+  43  |  * @param {import('@playwright/test').Page} page
+  44  |  */
+  45  |     async function login(page) {
+> 46  |       await page.goto(loginURL);
+      |                  ^ Error: page.goto: net::ERR_ABORTED; maybe frame was detached?
+  47  |     //   await  setZoom75(page);
+  48  |       await page.locator("//*[@id='txt_Username']").fill(username);
+  49  |        await page.locator("//*[@id='txt_Password']").fill(password);
+  50  |   await page.locator("//*[@id='btn_Login']").click();
+  51  |   await expect(page).toHaveURL(dashboardURL);
+  52  | //   await setZoom75(page);
+  53  |   await  openEquipmentManagement(page);
+  54  |     }
+  55  |     test('login function', async ({ page }) => {
+  56  |       await login(page);
+  57  |     })
+  58  |     test.describe('aviator sms', ()=>{
+  59  | test.beforeEach(async ({page}) =>{
+  60  | await login(page);
+  61  | })
+  62  | 
+  63  |  test('Request Application', async ({ page }) => {
+  64  | 
+  65  |   //   const vehicleNumber = generateVehicleNumber();
+  66  |   //   await page.locator("//*[@id='ctl00_ContentPlaceHolder1_Pane_1_content_txt_3988_OF']").fill(vehicleNumber);
+  67  |   //    await page.waitForTimeout(3000);
+  68  |   //   await page.locator("//*[@id='ctl00_ContentPlaceHolder1_Pane_1_content_ddl_5747_ME_842']").selectOption({index:2});
+  69  |   //   await page.waitForTimeout(3000);
+  70  |   //   await page.locator("//*[@id='ctl00_ContentPlaceHolder1_Pane_1_content_ddl_5749_ME_844']").selectOption({index:2});
+  71  |   //   await page.waitForTimeout(3000);
+  72  |   //   await page.locator("//*[@id='ctl00_ContentPlaceHolder1_Pane_1_content_txt_2157_OF']").pressSequentially('CRANE');
+  73  |   //  await page.waitForTimeout(3000);
+  74  |   //  console.log(await page.locator("//*[@id='ctl00_ContentPlaceHolder1_Pane_1_content_ddl_5750_ME_845']").allTextContents());
+  75  |   //    await page.locator("//*[@id='ctl00_ContentPlaceHolder1_Pane_1_content_ddl_5750_ME_845']").selectOption({label: 'Rotary Slasher'});
+  76  |     await page.waitForTimeout(3000);
+  77  |     await page.evaluate(() => {
+  78  |     window.scrollBy(0,1000);
+  79  | });
+  80  |  await page.waitForTimeout(3000);
+  81  | const ctl00ContentPlaceHolder1Pane1ContentBtn2244Of =
+  82  |     page.getByRole('button', {
+  83  |         name: 'Attachments',
+  84  |         exact: true
+  85  |     });
+  86  |     const popupPromise = page.waitForEvent('popup');
+  87  |  const childPage = await popupPromise;
+  88  | 
+  89  |     // Wait for child page to load
+  90  |     await childPage.waitForLoadState();
+  91  | await page.waitForTimeout(3000);
+  92  |     // Perform actions in child page
+  93  |     // console.log('Child Page URL:', childPage.url());
+  94  |      await page.locator("//*[@id='ctl00_ContentPlaceHolder1_txt_1992_OF']").pressSequentially('AADHAR');
+  95  | await page.waitForTimeout(3000);
+  96  |     // Example: Click a button in child page
+  97  |     await childPage.getByRole('button', { name: 'Upload', exact: true}).click();
+  98  | 
+  99  |     // Close child page
+  100 |     await childPage.close();
+  101 |     await page.pause();
+  102 | 
+  103 |     })
+  104 | })
+  105 | 
+```
