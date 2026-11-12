@@ -1,0 +1,203 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: AEQP.spec.js >> AviatorSMS Login Tests >> Login with username only
+- Location: tests\AEQP.spec.js:58:3
+
+# Error details
+
+```
+Error: locator.click: Unexpected token "/" while parsing css selector "/html/body/app-root/app-auth/div/div[2]/div/div[1]/form/button/span[4]". Did you mean to CSS.escape it?
+Call log:
+  - waiting for /html/body/app-root/app-auth/div/div[2]/div/div[1]/form/button/span[4]
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e6]:
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - heading "Login" [level=2] [ref=e9]
+      - paragraph [ref=e10]: Sign in to continue
+    - generic [ref=e11]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - text: Email Address
+            - generic [aria-hidden] [ref=e17]: "*"
+          - textbox "Email Address" [active] [ref=e18]: hjkl@gmail.com
+        - generic [ref=e19]:
+          - img [aria-hidden]: email
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - text: Password
+            - generic [aria-hidden] [ref=e26]: "*"
+          - textbox "Password" [ref=e27]:
+            - /placeholder: Enter Password
+        - button [ref=e29] [cursor=pointer]:
+          - img [aria-hidden] [ref=e30]: visibility_off
+      - button "Login" [ref=e34]
+      - generic [ref=e38] [cursor=pointer]:
+        - text: Don't have an account?
+        - generic [ref=e39]: SignUp
+  - generic [ref=e40]:
+    - generic [ref=e41]:
+      - heading "Signup" [level=2] [ref=e42]
+      - paragraph [ref=e43]: Create your AeroSlot account
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - generic [ref=e49] [cursor=pointer]:
+          - generic [ref=e50]:
+            - text: Select Operator
+            - generic [aria-hidden] [ref=e51]: "*"
+          - combobox "Select Operator" [ref=e52]
+        - generic [ref=e64]:
+          - generic [ref=e65]:
+            - text: Username
+            - generic [aria-hidden] [ref=e66]: "*"
+          - textbox "Username" [ref=e67]
+      - generic [ref=e69]:
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - text: Email Address
+              - generic [aria-hidden] [ref=e75]: "*"
+            - textbox "Email Address" [ref=e76]
+          - generic [ref=e77]:
+            - img [aria-hidden]: email
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - generic [ref=e83]:
+              - text: Phone Number
+              - generic [aria-hidden] [ref=e84]: "*"
+            - textbox "Phone Number" [ref=e85]
+          - generic [ref=e86]:
+            - img [aria-hidden]: phone
+      - generic [ref=e88]:
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - text: Password
+              - generic [aria-hidden] [ref=e94]: "*"
+            - textbox "Password" [ref=e95]
+          - img [aria-hidden] [ref=e97] [cursor=pointer]: visibility
+        - generic [ref=e101]:
+          - generic [ref=e102]:
+            - generic [ref=e103]:
+              - text: Confirm Password
+              - generic [aria-hidden] [ref=e104]: "*"
+            - textbox "Confirm Password" [ref=e105]
+          - img [aria-hidden] [ref=e107] [cursor=pointer]: visibility
+      - button "Signup" [ref=e109]
+      - generic [ref=e113] [cursor=pointer]:
+        - text: Already have an account?
+        - generic [ref=e114]: Login
+```
+
+# Test source
+
+```ts
+  1  |  
+  2  | 
+  3  | const { test, expect } = require('@playwright/test');
+  4  | 
+  5  | const username = 'hjkl@gmail.com';
+  6  | const password = 'Pr0sp3cta@NI';
+  7  | const loginURL = 'https://allocate.prospacta.org/home/schedule';
+  8  | const dashboardURL = 'https://allocate.prospacta.org/home/AirportList';
+  9  | 
+  10 | test.describe('AviatorSMS Login Tests', () => {
+  11 | 
+  12 |   test.beforeEach(async ({ page }) => {
+  13 |     await page.goto(loginURL);
+  14 |   });
+  15 | 
+  16 |   // TC01 - Positive login        
+  17 |   test('Login with valid credentials', async ({ page }) => {
+  18 |     await page.locator("//*[@id='mat-input-0']").pressSequentially(username);
+  19 |     await page.locator("//*[@id='mat-input-1']").pressSequentially(password);
+  20 |     await page.waitForTimeout(3000);
+  21 |     await page.locator("/html/body/app-root/app-auth/div/div[2]/div/div[1]/form/button/span[4]").click();
+  22 | 
+  23 |     await expect(page).toHaveURL(dashboardURL);
+  24 |   });
+  25 | 
+  26 |   // TC02 - Invalid username
+  27 |   test('Login with invalid username', async ({ page }) => {
+  28 |     await page.locator("//*[@id='mat-input-0']").fill('INVALID_USER_123');
+  29 |     await page.locator("//*[@id='mat-input-1']").fill(password);
+  30 | 
+  31 |     await page.locator("/html/body/app-root/app-auth/div/div[2]/div/div[1]/form/button/span[4]").click();
+  32 | 
+  33 |     await expect(page).not.toHaveURL(dashboardURL);
+  34 |     await expect(page.locator("//*[@id='mat-input-0']")).toBeVisible();
+  35 |   });
+  36 | 
+  37 |   // TC03 - Invalid password
+  38 |   test('Login with invalid password', async ({ page }) => {
+  39 |     await page.locator("//*[@id='mat-input-0']").fill(username);
+  40 |     await page.locator("//*[@id='mat-input-1']").fill('WrongPassword123');
+  41 | 
+  42 |     await page.locator("/html/body/app-root/app-auth/div/div[2]/div/div[1]/form/button/span[4]").click();
+  43 | 
+  44 |     await expect(page).not.toHaveURL(dashboardURL);
+  45 |     await expect(page.locator("//*[@id='mat-input-1']")).toBeVisible();
+  46 |   });
+  47 | 
+  48 |   // TC04 - Both fields empty
+  49 |   test('Login with empty credentials', async ({ page }) => {
+  50 |     await page.locator("/html/body/app-root/app-auth/div/div[2]/div/div[1]/form/button/span[4]").click();
+  51 | 
+  52 |     await expect(page).not.toHaveURL(dashboardURL);
+  53 |     await expect(page.locator("//*[@id='mat-input-0']")).toBeVisible();
+  54 |     await expect(page.locator("//*[@id='mat-input-1']")).toBeVisible();
+  55 |   });
+  56 | 
+  57 |   // TC05 - Username only
+  58 |   test('Login with username only', async ({ page }) => {
+  59 |     await page.locator("//*[@id='mat-input-0']").fill(username);
+  60 | 
+> 61 |     await page.locator("/html/body/app-root/app-auth/div/div[2]/div/div[1]/form/button/span[4]").click();
+     |                                                                                                  ^ Error: locator.click: Unexpected token "/" while parsing css selector "/html/body/app-root/app-auth/div/div[2]/div/div[1]/form/button/span[4]". Did you mean to CSS.escape it?
+  62 | 
+  63 |     await expect(page).not.toHaveURL(dashboardURL);
+  64 |   });
+  65 | 
+  66 |   // TC06 - Password only
+  67 |   test('Login with password only', async ({ page }) => {
+  68 |     await page.locator("//*[@id='mat-input-1']").fill(password);
+  69 | 
+  70 |     await page.locator("/html/body/app-root/app-auth/div/div[2]/div/div[1]/form/button/span[4]").click();
+  71 | 
+  72 |     await expect(page).not.toHaveURL(dashboardURL);
+  73 |   });
+  74 | 
+  75 |   // TC07 - Password masking
+  76 |   test('Password should be masked', async ({ page }) => {
+  77 |     const passwordField = page.locator("//*[@id='mat-input-1']");
+  78 | 
+  79 |     await passwordField.fill(password);
+  80 | 
+  81 |     await expect(passwordField).toHaveAttribute('type', 'password');
+  82 |   });
+  83 | 
+  84 | // TC08 - Login using Enter key
+  85 |   test('Login using Enter key', async ({ page }) => {
+  86 |     await page.locator("//*[@id='mat-input-0']").fill(username);
+  87 |     await page.locator("//*[@id='mat-input-1']").fill(password);
+  88 |    await page.keyboard.press('Enter')
+  89 |     await expect(page).toHaveURL(dashboardURL);
+  90 |   });
+  91 |  
+  92 | });
+  93 |     
+  94 | 
+```
